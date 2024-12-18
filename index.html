@@ -6,25 +6,26 @@
     <title>Event Ragistration</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 py-10">
-    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+<body class="bg-[#ecf0f3] py-10">
+    <div style="box-shadow: inset 10px 10px 15px #cbced1,inset -10px -10px 15px #ffffff;" class="max-w-3xl mx-auto bg-[#ecf0f3] p-8 rounded-lg shadow-md">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Muslim Student Association<sub>BRUR</sub></h1>
         <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Registration Form</h1>
         <form action="#" method="POST" class="space-y-6" name="google-sheet">
             <!-- Name -->
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
-                <input type="text" id="name" name="Name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input placeholder="Write your Name" type="text" id="name" name="Name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
             <!-- Phone No -->
             <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone No <span class="text-red-500">*</span></label>
-                <input type="tel" id="phone" name="Phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input placeholder="Write your Phone Number" type="tel" id="phone" name="Phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
 
             <!-- Email -->
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
-                <input type="email" id="email" name="Email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input placeholder="Write your Email" type="email" id="email" name="Email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
 
             <!-- Institution Type -->
@@ -41,40 +42,46 @@
             <!-- Institution Name -->
             <div>
                 <label for="institution-name" class="block text-sm font-medium text-gray-700">Institution Name <span class="text-red-500">*</span></label>
-                <input type="text" id="institution-name" name="InstitutionName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input placeholder="Write your Institution Name" type="text" id="institution-name" name="InstitutionName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
 
-            <!-- Department Name -->
+            <!--department name  -->
             <div>
                 <label for="department-name" class="block text-sm font-medium text-gray-700">Department Name <span class="text-red-500">*</span></label>
-                <input type="text" id="department-name" name="DepartmentName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <input placeholder="Write your Department Name" type="text" id="department-name" name="DepartmentName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- Book Name -->
+            <div>
+                <label for="Book-name" class="block text-sm font-medium text-gray-700">Book Name <span class="text-red-500">*</span></label>
+                <input placeholder="Write Book Name" type="text" id="Book-name" name="BookName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
 
             <!-- Gender -->
             <div>
-                <label class="block text-sm font-medium text-gray-700">Gender <span class="text-red-500">*</span></label>
-                <div class="mt-2 space-y-2">
-                    <label class="flex items-center">
-                        <input type="radio" name="Gender" value="male" required class="text-blue-500 focus:ring-blue-500">
-                        <span class="ml-2">Male</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="Gender" value="female" required class="text-blue-500 focus:ring-blue-500">
-                        <span class="ml-2">Female</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="Gender" value="other" required class="text-blue-500 focus:ring-blue-500">
-                        <span class="ml-2">Other</span>
-                    </label>
-                </div>
+                <label for="registration-type" class="block text-sm font-medium text-gray-700">Gender <span class="text-red-500">*</span></label>
+                <select id="registration-type" name="Gender" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="N/A">Select Gender Type</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
-
-            <!-- HSC Batch -->
+         
+            <!-- Batch -->
             <div>
-                <label for="hsc-batch" class="block text-sm font-medium text-gray-700">HSC Batch <span class="text-red-500">*</span></label>
-                <input type="number" id="hsc-batch" name="HSCBatch" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                <label for="batch" class="block text-sm font-medium text-gray-700">Batch <span class="text-red-500">*</span></label>
+                <input placeholder="Write your Batch" type="text" id="batch" name="Batch" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
             </div>
-
+            <!-- pick up date -->
+            <div>
+                <label for="pick-up-date" class="block text-sm font-medium text-gray-700">Pick Up Date <span class="text-red-500">*</span></label>
+                <input type="date" id="pick-up-date" name="PickUpDate" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- submit up date -->
+            <div>
+                <label for="submit-date" class="block text-sm font-medium text-gray-700">Submit Date <span class="text-red-500">*</span></label>
+                <input type="date" id="submit-date" name="SubmitDate" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
             <!-- Registration Type -->
             <div>
                 <label for="registration-type" class="block text-sm font-medium text-gray-700">Registration Type <span class="text-red-500">*</span></label>
@@ -84,11 +91,20 @@
                     <option value="special">Special</option>
                 </select>
             </div>
-
-            <!-- Delivery Address -->
+            <!--Provider Name -->
             <div>
-                <label for="delivery-address" class="block text-sm font-medium text-gray-700">Delivery Address <span class="text-red-500">*</span></label>
-                <textarea id="delivery-address" name="DeliveryAddress" rows="3" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <label for="pname" class="block text-sm font-medium text-gray-700">Provider Name <span class="text-red-500">*</span></label>
+                <input placeholder="Write Provider Name" type="text" id="pname" name="ProviderName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!--Receiver Name -->
+            <div>
+                <label for="Rname" class="block text-sm font-medium text-gray-700">Receiver Name <span class="text-red-500">*</span></label>
+                <input placeholder="Write Receiver Name" type="text" id="Rname" name="ReceiverName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- PresentAddress -->
+            <div>
+                <label for="PresentAddress" class="block text-sm font-medium text-gray-700">Present Address <span class="text-red-500">*</span></label>
+                <textarea id="PresentAddress" name="PresentAddress" rows="3" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
             </div>
 
             <!-- Submit Button -->
