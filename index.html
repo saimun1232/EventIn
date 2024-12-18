@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ragistration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Registration Form</h1>
+        <form action="#" method="POST" class="space-y-6" name="google-sheet">
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
+                <input type="text" id="name" name="Name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <!-- Phone No -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone No <span class="text-red-500">*</span></label>
+                <input type="tel" id="phone" name="Phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="Email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Institution Type -->
+            <div>
+                <label for="institution-type" class="block text-sm font-medium text-gray-700">Institution Type <span class="text-red-500">*</span></label>
+                <select id="institution-type" name="InstitutionType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="N/A">Select Institution Type</option>
+                    <option value="school">School</option>
+                    <option value="college">College</option>
+                    <option value="university">University</option>
+                </select>
+            </div>
+
+            <!-- Institution Name -->
+            <div>
+                <label for="institution-name" class="block text-sm font-medium text-gray-700">Institution Name <span class="text-red-500">*</span></label>
+                <input type="text" id="institution-name" name="InstitutionName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Department Name -->
+            <div>
+                <label for="department-name" class="block text-sm font-medium text-gray-700">Department Name <span class="text-red-500">*</span></label>
+                <input type="text" id="department-name" name="DepartmentName" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Gender -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Gender <span class="text-red-500">*</span></label>
+                <div class="mt-2 space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="Gender" value="male" required class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Male</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="Gender" value="female" required class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Female</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="Gender" value="other" required class="text-blue-500 focus:ring-blue-500">
+                        <span class="ml-2">Other</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- HSC Batch -->
+            <div>
+                <label for="hsc-batch" class="block text-sm font-medium text-gray-700">HSC Batch <span class="text-red-500">*</span></label>
+                <input type="number" id="hsc-batch" name="HSCBatch" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <!-- Registration Type -->
+            <div>
+                <label for="registration-type" class="block text-sm font-medium text-gray-700">Registration Type <span class="text-red-500">*</span></label>
+                <select id="registration-type" name="RegistrationType" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="N/A">Select Registration Type</option>
+                    <option value="regular">Regular</option>
+                    <option value="special">Special</option>
+                </select>
+            </div>
+
+            <!-- Delivery Address -->
+            <div>
+                <label for="delivery-address" class="block text-sm font-medium text-gray-700">Delivery Address <span class="text-red-500">*</span></label>
+                <textarea id="delivery-address" name="DeliveryAddress" rows="3" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" name="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Submit</button>
+            </div>
+            <!-- Reset Button -->
+            <div>
+                <button type="reset" name="reset" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Reset</button>
+            </div>
+        </form>
+    </div>
+    <!-- AKfycbwIJQDlOuIVU6g9TjvxCvPPlm0Sm-rp0tT3sLcIA5xRA1Ylk_ksiYAuZex1UO5QW4Dx -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJQDlOuIVU6g9TjvxCvPPlm0Sm-rp0tT3sLcIA5xRA1Ylk_ksiYAuZex1UO5QW4Dx/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
